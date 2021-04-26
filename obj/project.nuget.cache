@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AGTXhtUwohXD+CX9OF8qBpP3DGlNEABTbJwSkE3lezXKiy10w3CmR9Gaa3hcbf8hGwMxq8pm02wARvpOJOFZYA==",
+  "dgSpecHash": "QyBSD4M7Jimw151p5O3tXn7ldAuE2kHq09zStm9j5jYTX9muZky8adE2fhP47XXaOru8kIGxeFBb4EZweIk9SQ==",
   "success": true,
   "projectFilePath": "D:\\Users\\jpenrod\\source\\repos\\AutoFacCourse\\AutoFacCourse.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "D:\\Nuget\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
+    "D:\\Nuget\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

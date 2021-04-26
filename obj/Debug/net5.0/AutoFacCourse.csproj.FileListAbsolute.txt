@@ -14,3 +14,5 @@ D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.dll
 D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\ref\AutoFacCourse.dll
 D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.pdb
 D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.genruntimeconfig.cache
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\Autofac.dll
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.csproj.CopyComplete
