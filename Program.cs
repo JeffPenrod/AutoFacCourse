@@ -1,5 +1,6 @@
 ﻿using System;
 using Autofac;
+using Autofac.Core;
 
 namespace AutoFacCourse
 {
@@ -26,6 +27,22 @@ namespace AutoFacCourse
             public void Write(string message)
             {
                 Console.WriteLine($"Email sent to {adminEmail} : {message}");
+            }
+        }
+
+        public class SmsLog : ILog
+        {
+
+            public string phoneNumber;
+
+            public SmsLog(string phoneNumber)
+            {
+                this.phoneNumber = phoneNumber;
+            }
+
+            public void Write(string message)
+            {
+                Console.WriteLine($"SMS to {phoneNumber} : {message}");
             }
         }
 
@@ -82,16 +99,36 @@ namespace AutoFacCourse
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<ConsoleLog>().As<ILog>();
 
-            builder.Register((IComponentContext c) => 
-                new Engine(c.Resolve<ILog>(), 123));
-            builder.RegisterType<Car>();
+            // named parameter
+            //builder.RegisterType<SmsLog>().As<ILog>()
+            //    .WithParameter("phoneNumber", "8173804286");
+
+            // typed parameter
+            //builder.RegisterType<SmsLog>().As<ILog>()
+            //    .WithParameter(new TypedParameter(typeof(string), "8173804286"));
+             
+            // typed parameter
+            //builder.RegisterType<SmsLog>().As<ILog>()
+            //    .WithParameter(
+            //        new ResolvedParameter(
+            //            // predicate
+            //          (pi, ctx) => pi.ParameterType == typeof(string) && pi.Name == "phoneNumber",
+            //            // value accessor
+            //            (pi, ctx) => "8173804286"
+            //            )
+            //        );
+
+
+            Random random = new Random();
+            builder.Register((c, p) => new SmsLog(p.Named<string>("phoneNumber")))
+                .As<ILog>();
 
             IContainer container = builder.Build();
 
-            var car = container.Resolve<Car>();
-            car.Go();
+            var log = container.Resolve<ILog>(new NamedParameter("phoneNumber",  random.Next().ToString()));
+
+            log.Write("Test message.");
         }
     }
 }
