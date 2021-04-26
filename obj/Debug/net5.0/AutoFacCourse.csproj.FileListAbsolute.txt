@@ -1,0 +1,16 @@
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.exe
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.deps.json
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.runtimeconfig.json
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.runtimeconfig.dev.json
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.dll
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\ref\AutoFacCourse.dll
+D:\Users\jpenrod\source\repos\AutoFacCourse\bin\Debug\net5.0\AutoFacCourse.pdb
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.csprojAssemblyReference.cache
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.AssemblyInfoInputs.cache
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.AssemblyInfo.cs
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.csproj.CoreCompileInputs.cache
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.dll
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\ref\AutoFacCourse.dll
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.pdb
+D:\Users\jpenrod\source\repos\AutoFacCourse\obj\Debug\net5.0\AutoFacCourse.genruntimeconfig.cache
