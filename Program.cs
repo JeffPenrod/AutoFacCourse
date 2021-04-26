@@ -39,6 +39,11 @@ namespace AutoFacCourse
                 this.log = log;
                 id = new Random().Next();
             }
+            public Engine(ILog log, int engineId)
+            {
+                this.log = log;
+                id = engineId;
+            }
 
             public void Ahead(int power)
             {
@@ -58,6 +63,13 @@ namespace AutoFacCourse
                 this.engine = engine;
             }
 
+            public Car(Engine engine)
+            {
+                this.log = new EmailLog();
+                this.engine = engine;
+            }
+
+
             public void Go()
             {
                 engine.Ahead(100);
@@ -70,10 +82,10 @@ namespace AutoFacCourse
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
-            
-            builder.RegisterType<EmailLog>().As<ILog>();
-            builder.RegisterType<ConsoleLog>().As<ILog>().PreserveExistingDefaults();
-            builder.RegisterType<Engine>();
+            builder.RegisterType<ConsoleLog>().As<ILog>();
+
+            builder.Register((IComponentContext c) => 
+                new Engine(c.Resolve<ILog>(), 123));
             builder.RegisterType<Car>();
 
             IContainer container = builder.Build();
