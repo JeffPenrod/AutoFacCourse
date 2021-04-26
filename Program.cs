@@ -18,6 +18,17 @@ namespace AutoFacCourse
             }
         }
 
+        public class EmailLog : ILog
+        {
+            private const string adminEmail = "admin@foo.com";
+
+
+            public void Write(string message)
+            {
+                Console.WriteLine($"Email sent to {adminEmail} : {message}");
+            }
+        }
+
         public class Engine
         {
             private ILog log;
@@ -59,7 +70,9 @@ namespace AutoFacCourse
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<ConsoleLog>().As<ILog>().AsSelf();
+            
+            builder.RegisterType<EmailLog>().As<ILog>();
+            builder.RegisterType<ConsoleLog>().As<ILog>().PreserveExistingDefaults();
             builder.RegisterType<Engine>();
             builder.RegisterType<Car>();
 
